@@ -7,13 +7,13 @@ body {
 h1 {
     font-family: 'Kelly Slab', serif;
     font-size: 39.11px;
-    margin: 10% 5%;
+    margin: 1em 5%;
 }
 
 h2, h4 {
     font-family: 'Kelly Slab';
     font-size: 18.95px;
-    margin: 0 5% 5%;
+    margin: 0 5% 1em;
     text-decoration: none;
 }
 
@@ -21,7 +21,7 @@ h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 13.78px;
     font-weight: 500;
-    margin: 5%;
+    margin: 1em 5%;
 }
 
 a {
@@ -32,12 +32,12 @@ p, li {
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     font-weight: 300;
-    margin: 0 5% 5%;
+    margin: 0 5% 1em;
 }
 
 ol {
     padding: 0 1.25em;
-    margin: 0 5% 5%;
+    margin: 0 5% 1em;
 }
 
 ul {
@@ -58,6 +58,63 @@ ul>li {
 
 figure {
     margin: 0;
+}
+
+.transition {
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+}
+
+.portfolio nav li {
+    /*
+    background: yellow;
+    border-top: 1px solid red;
+    border-bottom: 1px solid green;
+    */
+
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 12px;
+
+    -webkit-transform: skew(0deg, -20deg);
+       -moz-transform: skew(0deg, -20deg);
+        -ms-transform: skew(0deg, -20deg);
+         -o-transform: skew(0deg, -20deg);
+            transform: skew(0deg, -20deg);
+}
+.portfolio nav li.active {
+    height: 600px;
+    margin-bottom: 0;
+}
+
+.portfolio nav figure {
+    margin-top: -160px;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: skew(0deg, 20deg);
+       -moz-transform: skew(0deg, 20deg);
+        -ms-transform: skew(0deg, 20deg);
+         -o-transform: skew(0deg, 20deg);
+            transform: skew(0deg, 20deg);
+}
+.portfolio nav li.active figure {
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+}
+
+.portfolio nav li.active,
+.portfolio nav li.active figure {
+    -webkit-transform: skew(0deg, 0deg);
+       -moz-transform: skew(0deg, 0deg);
+        -ms-transform: skew(0deg, 0deg);
+         -o-transform: skew(0deg, 0deg);
+            transform: skew(0deg, 0deg);
 }
 
 .portfolio nav img {
