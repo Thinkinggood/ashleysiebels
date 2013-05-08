@@ -75,6 +75,10 @@ li.skew-wrapper {
 	-webkit-backface-visibility: hidden;
 }
 
+article {
+	display: none;
+}
+
 li.skew-wrapper figure {
 	display: block;
 	margin-left: 0;
@@ -230,4 +234,179 @@ li:hover figurecaption {
 	left:2px;
 }
 */
-@media screen and (max-width: 1024px) and (min-width: 560px) {}
+@media screen and (max-width: 2000px) and (min-width: 560px) {
+
+
+
+li.selected,
+li:hover {
+	background-color: white;
+	height: 450px;
+	width: 100%;
+
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+}
+
+li.selected figure,
+li:hover figure {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	z-index: -2;
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+
+	width: 100%;
+}
+
+
+li.skew-wrapper {
+	background-color: blue;
+	height: 90px;
+	margin-left: 5%;
+	margin-top: 10px;
+	overflow: hidden;
+	width: 40%;
+
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+
+	-webkit-backface-visibility: hidden;
+}
+
+li.skew-wrapper figure {
+	display: block;
+	margin-left: 0;
+	margin-top: -100px;
+	overflow: hidden;
+	position: relative;
+
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+
+	width: 100%;
+}
+
+span {
+	border-style: solid;
+	border-width: 0 100px 100px 0;
+	border-color: transparent #ffffff transparent transparent;
+	height: 0px;
+	opacity: 0;
+	position: absolute;
+	right: -70px;
+	top: 0px;
+	width: 0px;
+	
+		
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+}
+
+
+li:hover span {
+		border-color: transparent #000000 transparent transparent;
+
+	right: 0px;
+	top: 92px;
+	opacity: 100;
+	z-index:  2;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+}
+figurecaption {
+
+			background-color: black;
+			display: block;
+			color: white;
+			height: 100px;
+			right: -300px;
+			opacity: 0;
+			position: absolute;
+			top: 0px;
+			width: 100%;
+			
+			-webkit-transition: all 0.2s ease-in-out;
+			-moz-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			-o-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+
+}
+li:hover figurecaption {
+		right: 0px;
+		opacity: 100;
+		z-index: 1;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+}
+
+
+article {
+	display: block;
+	float: right;
+	height: 450px;
+	margin-left: 320px;
+	position: absolute;
+	top: 0px;
+	width: 320px;
+}
+
+}
