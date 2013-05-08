@@ -46,6 +46,9 @@ figure {
 img {
 	width: 100%;
 }
+article {
+	display: none;
+}
 
 li.skew-wrapper {
 	background-color: blue;
@@ -75,9 +78,7 @@ li.skew-wrapper {
 	-webkit-backface-visibility: hidden;
 }
 
-article {
-	display: none;
-}
+
 
 li.skew-wrapper figure {
 	display: block;
@@ -106,6 +107,43 @@ li.skew-wrapper figure {
 	width: 100%;
 }
 
+li.selected,
+li:hover {
+	background-color: white;
+	height: 450px;
+	width: 100%;
+
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+}
+
+li.selected figure,
+li:hover figure {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	z-index: -2;
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+
+	width: 100%;
+}
 
 span {
 	
@@ -128,7 +166,17 @@ span {
 }
 
 
+li:hover span {
+	right: 0px;
+	opacity: 100;
+	z-index:  2;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 
+}
 
 
 figurecaption {
@@ -148,6 +196,17 @@ figurecaption {
 			-ms-transition: all 0.2s ease-in-out;
 			-o-transition: all 0.2s ease-in-out;
 			transition: all 0.2s ease-in-out;
+
+}
+li:hover figurecaption {
+		right: 0px;
+		opacity: 100;
+		z-index: 1;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 
 }
 
@@ -179,6 +238,44 @@ figurecaption {
 @media screen and (max-width: 2000px) and (min-width: 560px) {
 
 
+
+li.selected,
+li:hover {
+	background-color: white;
+	height: 450px;
+	width: 100%;
+
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+}
+
+li.selected figure,
+li:hover figure {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	z-index: -2;
+	/*Firefox*/
+	-moz-transform: skew(0deg, 0deg);
+	/*Microsoft Internet Explorer*/
+	-ms-transform: skew(0deg, 0deg);
+	/*Chrome, Safari*/
+	-webkit-transform: skew(0deg, 0deg);
+	/*Opera*/
+	-o-transform: skew(0deg, 0deg);
+	/*General*/
+	transform: skew(0deg, 0deg);
+
+	width: 100%;
+}
 
 
 li.skew-wrapper {
@@ -257,6 +354,20 @@ span {
 }
 
 
+li:hover span {
+		border-color: transparent #000000 transparent transparent;
+
+	right: 0px;
+	top: 92px;
+	opacity: 100;
+	z-index:  2;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+
+}
 figurecaption {
 
 			background-color: black;
@@ -276,8 +387,17 @@ figurecaption {
 			transition: all 0.2s ease-in-out;
 
 }
+li:hover figurecaption {
+		right: 0px;
+		opacity: 100;
+		z-index: 1;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 
-
+}
 
 
 article {
