@@ -1,0 +1,66 @@
+body {
+    background: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Kelly Slab', serif;
+    font-size: 39.11px;
+    margin: 10% 5%;
+}
+
+h2, h4 {
+    font-family: 'Kelly Slab';
+    font-size: 18.95px;
+    margin: 0 5% 5%;
+    text-decoration: none;
+}
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13.78px;
+    font-weight: 500;
+    margin: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p, li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0 5% 5%;
+}
+
+ol {
+    padding: 0 1.25em;
+    margin: 0 5% 5%;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin: 0;
+}
+
+ol>li {
+    list-style-type: lower-alpha;
+}
+
+ul>li {
+    list-style-type: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.portfolio nav img {
+    max-width: 600px;
+    width: 100%;
+}
