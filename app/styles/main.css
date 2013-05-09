@@ -129,11 +129,17 @@ button {
     border: 0;
     height: 100px;
     margin: 0;
+    opacity: 0;
     padding: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 100px;
+}
+
+.active button {
+    opacity: 1;
+
 }
 
 .triangle {
@@ -142,7 +148,6 @@ button {
     border-color: transparent #fff transparent transparent;
     display: block;
     height: 0;
-    opacity: 1;
     position: absolute;
     right: 0;
     top: 0;
