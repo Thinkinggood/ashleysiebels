@@ -60,6 +60,34 @@ figure {
     margin: 0;
 }
 
+figcaption {
+    background-color: black;
+    display: block;
+    color: white;
+    right: -100%;
+    opacity: 0;
+    padding: 1em 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+:focus {
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+}
+
+.selected {
+    opacity: 1;
+    right: 0;
+}
+
+
 .transition-all {
     -webkit-transition: all 0.2s ease-in-out;
        -moz-transition: all 0.2s ease-in-out;
@@ -124,7 +152,7 @@ li.active figure {
     width: 100%;
 }
 
-button {
+.portfolio-piece-more {
     background-color: transparent;
     border: 0;
     height: 100px;
@@ -137,7 +165,7 @@ button {
     width: 100px;
 }
 
-.active button {
+.active .portfolio-piece-more {
     opacity: 1;
 
 }
@@ -154,7 +182,7 @@ button {
     width: 0;
 }
 
-.plus {
+.more-or-less {
     color: #000;
     font-family: monospace;
     font-size: 2em;
@@ -164,4 +192,33 @@ button {
     right: 30%;
     top: 30%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
