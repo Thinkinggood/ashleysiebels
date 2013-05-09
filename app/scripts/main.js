@@ -2,7 +2,7 @@ $(function() {
     'use strict';
 
     $('.portfolio-piece')
-        .on('click touchend focus', function(event) {
+        .on('click focus', function(event) {
             event.preventDefault();
             event.stopPropagation();
 
@@ -27,7 +27,7 @@ $(function() {
         });
 
     $('.portfolio-piece-more')
-        .on('click touchend focus', function(event) {
+        .on('click focus', function(event) {
             var $this = $(this);
             var $piece = $this.closest('.portfolio-piece');
             if ( ! $piece.hasClass('active')) {
@@ -54,7 +54,7 @@ $(function() {
         });
 
 
-    $(document).on('click touchend focus', function() {
+    $(document).on('click focus', function() {
         $('.active')
             .removeClass('active')
             .height(90);
