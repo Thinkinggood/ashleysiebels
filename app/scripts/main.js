@@ -1,7 +1,7 @@
 $(function() {
     'use strict';
 
-    $('nav li')
+    $('.portfolio-piece')
         .on('click touchend', function(event) {
             event.preventDefault();
             event.stopPropagation();
@@ -15,7 +15,7 @@ $(function() {
             } else {
                 $this
                     .addClass('active')
-                    .height($this.find('figure').height() + 90)
+                    .height($this.find('figure').height())
                     .siblings()
                     .removeClass('active')
                     .height(90);

@@ -60,7 +60,7 @@ figure {
     margin: 0;
 }
 
-.transition {
+.transition-all {
     -webkit-transition: all 0.2s ease-in-out;
        -moz-transition: all 0.2s ease-in-out;
         -ms-transition: all 0.2s ease-in-out;
@@ -68,7 +68,7 @@ figure {
             transition: all 0.2s ease-in-out;
 }
 
-.portfolio nav li {
+.portfolio-piece {
     /*
     background: yellow;
     border-top: 1px solid red;
@@ -86,12 +86,13 @@ figure {
          -o-transform: skew(0deg, -20deg);
             transform: skew(0deg, -20deg);
 }
-.portfolio nav li.active {
+
+li.active {
     height: 600px;
     margin-bottom: 0;
 }
 
-.portfolio nav figure {
+.portfolio-piece figure {
     margin-top: -160px;
     position: absolute;
     top: 50%;
@@ -102,14 +103,15 @@ figure {
          -o-transform: skew(0deg, 20deg);
             transform: skew(0deg, 20deg);
 }
-.portfolio nav li.active figure {
+
+li.active figure {
     margin-top: 0;
     position: absolute;
     top: 0;
 }
 
-.portfolio nav li.active,
-.portfolio nav li.active figure {
+li.active,
+li.active figure {
     -webkit-transform: skew(0deg, 0deg);
        -moz-transform: skew(0deg, 0deg);
         -ms-transform: skew(0deg, 0deg);
@@ -117,7 +119,44 @@ figure {
             transform: skew(0deg, 0deg);
 }
 
-.portfolio nav img {
+.portfolio-piece img {
     max-width: 600px;
     width: 100%;
 }
+
+button {
+    background-color: transparent;
+    border: 0;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+
+.triangle {
+    border-style: solid;
+    border-width: 0 100px 100px 0;
+    border-color: transparent #fff transparent transparent;
+    display: block;
+    height: 0;
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+}
+
+.plus {
+    color: #000;
+    font-family: monospace;
+    font-size: 2em;
+    font-weight: bold;
+    margin: -0.5em -0.5em 0 0;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+}
+
