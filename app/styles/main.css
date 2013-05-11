@@ -21,18 +21,21 @@ h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 13.78px;
     font-weight: 500;
-    margin: 1em 5%;
+    margin: -1em 5% 1em;
 }
 
 a {
     text-decoration: none;
 }
+p {
+    margin-right: 10%;
+}
 
 p, li {
     font-family: 'Quicksand', sans-serif;
-    font-size: 14px;
+    font-size: 0.9em;
     font-weight: 300;
-    margin: 0 5% 1em;
+    margin: -1em 10% .25em 5%;
 }
 
 ol {
@@ -102,11 +105,17 @@ figcaption {
     border-top: 1px solid red;
     border-bottom: 1px solid green;
     */
-
+    background: white;
+    border: 10px solid #fff;
     height: 90px;
+
     overflow: hidden;
+     padding: 2px;
     position: relative;
-    margin-bottom: 12px;
+    -webkit-backface-visibility: hidden;
+ 
+
+
 
     -webkit-transform: skew(0deg, -20deg);
        -moz-transform: skew(0deg, -20deg);
