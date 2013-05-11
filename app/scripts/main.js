@@ -5,10 +5,19 @@ $(function() {
         .on('click', function(event) {
             event.preventDefault();
             event.stopPropagation();
+            // console.log(event.type);
+
+            // var $this = $(this);
+            // if (this === document.activeElement) {
+            //     $this.focusout();
+            // } else {
+            //     $this.focusin();
+            // }
         })
         .on('focusin', function(event) {
             event.preventDefault();
             event.stopPropagation();
+            // console.log(event.type);
 
             var $this = $(this);
             $this
@@ -19,7 +28,6 @@ $(function() {
                 .height(90)
                 .find('figcaption')
                 .removeClass('selected');
-
             $this.find('.more-or-less').text('+');
             $this.find('figcaption').removeClass('selected');
         })
