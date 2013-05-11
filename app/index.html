@@ -23,18 +23,20 @@
     </head>
     <body>
         <div class="container" role="main">
-            <h1>Yo Siebels! I need a website.</h1>
-            <h3>You've got an idea. Something you need to 'get out there.' If only you had a designer/developer/fairy-godmother who knew a thing or two about responsive design, analytics, css, video, photography, contemporary short-fiction, and actually wanted to hear about your horrible experience with WordPress plugins over a few too many cold beers.</h3>
-            <h2>
-                <a href="tel:612-986-2585" tabindex="0">Call.</a>
-                <a href="mailto:heyo@ashleysiebels.com" tabindex="0">Email</a>.
-                <a href="https://maps.google.com/?q=711+E+50th+St,+Austin,+Texas,+78751" tabindex="0">Stalk.</a>
-            </h2>
-            <h4>Some recent work &hellip;</h4>
+            <header>
+                <h1>Yo Siebels! I need a website.</h1>
+                <h3>You've got an idea. Something you need to 'get out there.' If only you had a designer/developer/fairy-godmother who knew a thing or two about responsive design, analytics, css, video, photography, contemporary short-fiction, and actually wanted to hear about your horrible experience with WordPress plugins over a few too many cold beers.</h3>
+                <h2>
+                    <a href="tel:612-986-2585">Call.</a>
+                    <a href="mailto:heyo@ashleysiebels.com">Email</a>.
+                    <a href="https://maps.google.com/?q=711+E+50th+St,+Austin,+Texas,+78751">Stalk.</a>
+                </h2>
+                <h4>Some recent work &hellip;</h4>
+            </header>
             <div id="js-portfolio" class="portfolio">
                 <nav>
                     <ul>
-                       <li class="portfolio-piece transition-all" tabindex="0">
+                       <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/kut_viewsandbrews.jpg" alt="kut_viewsandbrews">
                                 <figcaption class="transition-all">
@@ -47,7 +49,7 @@
                                 <span class="more-or-less">+</span>
                             </button>
                         </li>
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/tmm_logo.jpg" alt="tmm_logo">
                                 <figcaption class="transition-all">
@@ -60,7 +62,7 @@
                                 <span class="more-or-less">+</span>
                             </button>
                         </li>
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/panara_logo.jpg" alt="panara_logo">
                                 <figcaption class="transition-all">
@@ -73,7 +75,7 @@
                                 <span class="more-or-less">+</span>
                             </button>
                         </li>
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/lyonprep_logo.jpg" alt="lyonprep_logo">
                                 <figcaption class="transition-all">
@@ -87,7 +89,7 @@
                             </button>
                         </li>
 
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/Coldtowne_Mainpage.jpg" alt="Coldtowne_Mainpage">
                                 <figcaption class="transition-all">
@@ -100,7 +102,7 @@
                                 <span class="more-or-less">+</span>
                             </button>
                         </li>
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/neonlit_website.jpg" alt="neonlit_website">
                                 <figcaption class="transition-all">
@@ -114,7 +116,7 @@
                             </button>
                         </li>
 
-                        <li class="portfolio-piece transition-all" tabindex="0">
+                        <li class="portfolio-piece transition-all">
                             <figure class="transition-all">
                                 <img src="images/neonlit_march_06.jpg" alt="neonlit_march_06">
                                 <figcaption class="transition-all">
@@ -147,11 +149,8 @@
         </script>
         -->
 
-        <!-- build:js scripts/vendor/jquery.js -->
-        <script src="components/jquery/jquery.js"></script>
-        <!-- endbuild -->
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script data-main="scripts/config" src="components/requirejs/require.js"></script>
         <!-- endbuild -->
 </body>
 </html>

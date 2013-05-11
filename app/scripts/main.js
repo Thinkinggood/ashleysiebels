@@ -1,114 +1,72 @@
-$(function() {
-    'use strict';
+/** ====================================================================================================== **/
+require(
+    [
+        'jquery'
+    ], function (
+        $
+    ) {
+        'use strict';
 
-    $('.portfolio-piece')
-        .on('click', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            // console.log(event.type);
+        var portfolioPieceInactiveHeight = 90;
 
-            // var $this = $(this);
-            // if (this === document.activeElement) {
-            //     $this.focusout();
-            // } else {
-            //     $this.focusin();
-            // }
-        })
-        .on('focusin', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            // console.log(event.type);
-
-            var $this = $(this);
-            $this
-                .addClass('active')
-                .height($this.find('figure').height())
-                .siblings()
-                .removeClass('active')
-                .height(90)
+        function deselect($piece) {
+            $piece
                 .find('figcaption')
-                .removeClass('selected');
-            $this.find('.more-or-less').text('+');
-            $this.find('figcaption').removeClass('selected');
-        })
-        .on('focusout', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            // var $this = $(this);
-            // if ($this.hasClass('active')) {
-            //     $this
-            //         .removeClass('active')
-            //         .height(90)
-            //         .find('figcaption')
-            //         .removeClass('selected');
-            // }
-        });
-
-    $('.portfolio-piece-more')
-        .on('click', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            var $this = $(this);
-            var $piece = $this.closest('.portfolio-piece');
-            var $caption = $piece.find('figcaption');
-
-            if ($caption.hasClass('selected')) {
-                $this
-                    .find('.more-or-less')
-                    .text('+');
-
-                $caption
-                    .removeClass('selected');
-
-            } else {
-                $this
-                    .find('.more-or-less')
-                    .text('-');
-
-                $caption
-                    .addClass('selected');
-            }
-        })
-        .on('focusin', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            var $this = $(this);
-            var $piece = $this.closest('.portfolio-piece');
-
-            if ( ! $piece.hasClass('active') && event.type === 'focusin') {
-                $this.blur();
-                $piece.focus();
-                return;
-            }
-
-            $this.click();
-        })
-        .on('focusout', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-
-            var $this = $(this);
-            var $piece = $this.closest('.portfolio-piece');
-            var $caption = $piece.find('figcaption');
-
-            $this
+                    .removeClass('selected')
+                    .end()
                 .find('.more-or-less')
-                .text('+');
+                    .text('+')
+                    .end();
+        }
 
-            $caption
-                .removeClass('selected');
-        });
+        $(document)
+            .on('click', '.portfolio-piece', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
 
+                var $this = $(this);
+                if ($this.find('figcaption').hasClass('selected')) {
+                    deselect($this);
+                    return;
+                }
 
-    $(document).on('click', function() {
-        $('.active')
-            .removeClass('active')
-            .height(90);
+                var h = $this.hasClass('active')
+                    ? portfolioPieceInactiveHeight
+                    : $this.find('figure').height();
 
-        $('.selected').removeClass('selected');
-        $('.more-or-less').text('+');
-    });
-});
+                $this
+                    .toggleClass('active')
+                    .height(h)
+                    .siblings()
+                    .removeClass('active')
+                    .height(portfolioPieceInactiveHeight);
+
+                deselect($this.siblings());
+            })
+            .on('click', '.portfolio-piece-more', function(event) {
+                var $this = $(this);
+                var $piece = $this.closest('.portfolio-piece');
+                if ( ! $piece.hasClass('active')) {
+                    return;
+                }
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                var $caption = $piece.find('figcaption');
+                $caption.toggleClass('selected');
+
+                var t = $caption.hasClass('selected')
+                    ? '-'
+                    : '+';
+
+                $this.find('.more-or-less').text(t);
+            })
+            .on('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                deselect($('.portfolio-piece').removeClass('active').height(90));
+            });
+    }
+);
