@@ -1,7 +1,14 @@
+
+
+
 body {
     background: #e2e2e2;
     margin: 0;
     padding: 0;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 header {
@@ -26,13 +33,37 @@ h3 {
     font-family: 'Quicksand', sans-serif;
     font-size: 13.78px;
     font-weight: 500;
-    margin: 0 5% 1em;
-    text-transform: uppercase;
+    margin: -3% 5% 1em;
+    text-transform: none;
+
+   
+
 }
 
 a {
     text-decoration: none;
 }
+
+
+a:link {
+
+    color:#FF00B3;
+
+        }      /* unvisited link */
+
+a:visited {
+    color:#BABABA;
+        }  /* visited link */
+
+a:hover {
+
+    color:#FF00B3;
+        }  /* mouse over link */
+
+a:active {
+    color:#FF00B3;
+        }  /* selected link */
+
 p {
     margin-right: 10%;
 }
@@ -40,8 +71,15 @@ p {
 p, li {
     font-family: 'Quicksand', sans-serif;
     font-size: 0.9em;
-    font-weight: 300;
+    font-weight: 600;
     margin: -1em 10% .25em 5%;
+
+    /*-ms-text-stroke: 0.5px transparent;*/
+    /*-webkit-text-stroke: 0.5px transparent;*/
+    /*text-stroke: 0.5px transparent;*/
+
+
+
 }
 
 ol {
