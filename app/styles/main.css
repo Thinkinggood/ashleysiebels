@@ -120,9 +120,10 @@ figcaption > h4 {
     padding: 0;
     position: relative;
     -webkit-backface-visibility: hidden;
-
-
-
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -backface-visibility: hidden;
 
     -webkit-transform: skew(0deg, -20deg);
        -moz-transform: skew(0deg, -20deg);
