@@ -20,11 +20,18 @@ require(
         }
 
         $(document)
+            .on('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+
+                deselect($('.portfolio-piece').removeClass('active').height(90));
+            })
             .on('click', '.portfolio-piece', function(event) {
                 event.preventDefault();
                 event.stopPropagation();
 
                 var $this = $(this);
+
                 if ($this.find('figcaption').hasClass('selected')) {
                     deselect($this);
                     return;
@@ -62,12 +69,8 @@ require(
 
                 $this.find('.more-or-less').text(t);
             })
-           
-            .on('click', function(event) {
-                event.preventDefault();
+            .on('click', 'a', function(event) {
                 event.stopPropagation();
-
-                deselect($('.portfolio-piece').removeClass('active').height(90));
             });
     }
 );
