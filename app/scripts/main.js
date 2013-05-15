@@ -62,6 +62,7 @@ require(
 
                 $this.find('.more-or-less').text(t);
             })
+           
             .on('click', function(event) {
                 event.preventDefault();
                 event.stopPropagation();
